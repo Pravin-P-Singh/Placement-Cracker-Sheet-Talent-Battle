@@ -11,5 +11,6 @@ public class PS3 {
         } else{
             System.out.println("Not an alphabet");
         }
+        sc.close();
     }
 }
