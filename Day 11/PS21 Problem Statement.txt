@@ -1,0 +1,12 @@
+Write a program to identify if the number is Palindrome or not
+Description
+Get a number as input from the user and check whether that number is a Palindrome or not.
+
+Input
+121
+Output
+Palindrome
+Input
+34
+Output
+Not a Palindrome
