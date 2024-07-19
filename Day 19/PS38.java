@@ -8,19 +8,24 @@ public class PS38 {
         System.out.println(result);
         sc.close();
     }
-    static String removeDuplicates(String input){
+
+    static String removeDuplicates(String input) {
+        int[] count = new int[256];
         StringBuilder output = new StringBuilder();
-        boolean [] seen = new boolean[256];
-        for(int i = 0; i < input.length(); i++){
-            char ch = input.charAt(i);
-            if(!seen[ch]){
-                seen[ch] = true;
+
+        // First pass: count the occurrences of each character
+        for (char ch : input.toCharArray()) {
+            count[ch]++;
+        }
+
+        // Second pass: build the output string excluding characters that appear more
+        // than once
+        for (char ch : input.toCharArray()) {
+            if (count[ch] == 1) {
                 output.append(ch);
             }
-            else{
-                output.deleteCharAt(i);
-            }
         }
+
         return output.toString();
     }
 }
